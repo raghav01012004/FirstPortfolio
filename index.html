@@ -9,12 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
+        pre{
+            font-family: 'Tektur', cursive;
+        }
         body {
             background: rgb(0, 0, 46);
             color: beige;
@@ -48,6 +52,7 @@
             color: rgb(187, 145, 227);
             font-size: 1.02rem;
         }
+
         .list1 ul li {
             list-style: disc;
             margin: 0 25px;
@@ -66,11 +71,12 @@
         .left {
             font-size: 1.7rem;
         }
-        .left a{
+
+        .left a {
             color: rgb(68, 48, 223);
             text-decoration: none;
         }
-        
+
 
         .uno {
             display: flex;
@@ -85,13 +91,15 @@
         .leftSection {
             font-size: 3rem;
         }
-        .leftSection .buttons{
+
+        .leftSection .buttons {
             margin: 10px;
             margin-left: 50px;
             display: flex;
             justify-content: space-around;
         }
-        .leftSection .btn{
+
+        .leftSection .btn {
             padding: 10px;
             border-radius: 30px;
             background-color: rgb(12, 12, 65);
@@ -100,15 +108,17 @@
             cursor: pointer;
             padding: 10px;
         }
-        
-        .btn a{
+
+        .btn a {
             color: bisque;
             text-decoration: none;
         }
+
         .btn a:hover {
             color: rgb(187, 145, 227);
             font-size: 22px;
         }
+
         .rightSection img {
             margin: 30px;
         }
@@ -121,9 +131,10 @@
             color: rgb(187, 145, 227);
         }
 
-        #element1{
+        #element1 {
             right: 0px;
         }
+
         main hr {
             color: rgb(187, 145, 227);
             margin: 50px;
@@ -154,7 +165,7 @@
             background: whitesmoke;
             height: 95px;
             width: 1px;
-            margin: 0 100px;
+            margin: 0 6vw;
         }
 
         .Expimage {
@@ -170,37 +181,138 @@
             top: -19px;
             width: 100px;
         }
-        footer{
+
+        footer {
             background: #0f0f39;
-            
+
         }
-        .footer{
+
+        .footer {
             display: flex;
             padding: 25px 125px;
             justify-content: space-evenly;
         }
-        .footer ul{
+
+        .footer ul {
             list-style: none;
         }
-        .footer > div{
+
+        .footer>div {
             width: 250px;
-        } 
-        footer .rights{
+        }
+
+        footer .rights {
             text-align: center;
             color: gray;
             padding: 12px 0;
         }
-        .footer-third ul{
+
+        .footer-third ul {
             display: flex;
         }
-        
+
+        @media screen and (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                
+            }
+
+            .left{
+                margin: 10px;
+            }
+            
+            .uno {
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: xx-large;
+            }
+            .leftSection .intro{
+                margin-right: 180px;
+            }
+            .rightSection{
+                display: flex;
+                width: 85% !important;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .rightSection img {
+            margin-bottom: 75px;
+            width: 50vw;
+            }
+            .dos{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                flex-direction: column;
+            }
+
+            .dos .vertical {
+                height: auto;
+            }
+
+            .Expimage {
+                width: 50px;
+                position: relative;
+                top: -10px;
+                margin: 30px;
+                left: -91px;
+            }
+
+            .vertical-title {
+                position: relative;
+                top: -95px;
+                left: 15px;
+                width: 100px;
+            }
+
+            .dos .box {
+                width: 70vw;
+            }
+            /* body{
+                min-width: auto;
+            } */
+            nav .right ul{
+                display: flex;
+                flex-direction: column;
+            }
+            .right ul li{
+                margin: auto;
+            }
+            .footer{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+            .footer-third ul{
+                flex-direction: column-reverse;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="left" data-aos="flip-down"><a href="/index.html"><h2>Raghav Dixit</h2></a></div>
+            <div class="left" data-aos="flip-down"><a href="/index.html">
+                    <h2>Raghav Dixit</h2>
+                </a></div>
             <div class="right list" data-aos="zoom-out">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
@@ -208,20 +320,29 @@
                     <li><a href="">Services</a></li>
                     <li><a href="">Projects</a></li>
                     <li><a href="">Contact Me</a></li>
+
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <section class="uno">
-            <div class="leftSection"data-aos="fade-up">
-                <i>Hey There !!!</i><br><br>
-                I am <span class="name">Raghav</span>,<br> <b>AND</b> <br>I am a passionate <br><b><span
-                        id="element"></span>.</b> <br><br>
+            <div class="leftSection" data-aos="fade-up">
+                <div class="intro">
+<pre>
+<i>Hey There !!!</i><br>
+                
+I am <span class="name">Raghav</span>,<br><b>AND</b> <br>I am a passionate
+<b><span id="element"></span>.</b> <br>
+</pre>
+                </div>
+                
 
                 <div class="buttons">
-                    <img src="resumelogo.png" alt="" width="80px"><button class="btn"><a href="">Download resume</a>  </button> 
-                    <img src="gitlogo.png" alt="" width="80px"><button class="btn"><a href="https://github.com/raghav01012004" target="_blank">Visit Github</a> </button>
+                    <img src="resumelogo.png" alt="" width="80px"><button class="btn"><a href="">Download resume</a>
+                    </button>
+                    <img src="gitlogo.png" alt="" width="80px"><button class="btn"><a
+                            href="https://github.com/raghav01012004" target="_blank">Visit Github</a> </button>
                 </div>
             </div>
             <div class="rightSection" data-aos="fade-left">
@@ -232,7 +353,7 @@
         </section>
 
         <hr data-aos="fade-left">
-        <hr data-aos="fade-right" style="width:60%; margin: auto;" />
+        <hr data-aos="fade-right" style="width:60vw; margin: auto; align-items: center; justify-content: center;" />
         <br><br>
         <section class="dos" data-aos="fade-up">
             <span class="textgray">My Professional Work Experiences</span>
@@ -277,21 +398,21 @@
             <div class="footer-first">
                 <h1>Raghav's Developer PortFolio</h1>
             </div>
-            <div class="footer-second list1" data-aos="flip-down" >
+            <div class="footer-second list1" data-aos="flip-down">
                 <ul>
                     <li><a href="/index.html">Home</a></li><br>
                     <li><a href="">About</a></li><br>
                     <li><a href="">Services</a></li><br>
                     <li><a href="">Projects</a></li><br>
                     <li><a href="">Contact Me</a></li><br>
-                </ul> 
+                </ul>
             </div>
             <div class="footer-third list" data-aos="flip-right">
                 <h3><u>Social Media Handles</u></h3>
                 <br>
                 <ul>
-                    <li><a href=""><img src="linlogo.png" alt="" width="40px">  LinkedIn</a></li><br>
-                    <li><a href=""><img src="instalogo.png" alt="" width="40px">  Instagram</a></li><br>
+                    <li><a href=""><img src="linlogo.png" alt="" width="40px"> LinkedIn</a></li><br>
+                    <li><a href=""><img src="instalogo.png" alt="" width="40px"> Instagram</a></li><br>
                     <li><a href=""><img src="gitlogo.png" alt="" width="40px"> Github</a></li>
                 </ul>
             </div>
@@ -326,14 +447,14 @@
     </script>
     <script>
         var typed = new Typed('#element1', {
-            strings: ['Loading','Looking for opportunities'],
+            strings: ['Loading', 'Looking for opportunities'],
             typeSpeed: 50,
         });
     </script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
         AOS.init();
-      </script>
+    </script>
 </body>
 
 </html>
