@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghav's PortFolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        pre {
+            font-family: 'Tektur', cursive;
+        }
+
+        body {
+            background: rgb(0, 0, 46);
+            color: beige;
+            font-family: 'Tektur', cursive;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background: rgb(0, 0, 60);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: safe;
+        }
+
+        .list ul li {
+            list-style: none;
+            margin: 0 25px;
+        }
+
+        .list ul li a {
+            color: bisque;
+            text-decoration: none;
+        }
+
+        .list ul li a:hover {
+            color: rgb(187, 145, 227);
+            font-size: 1.02rem;
+        }
+
+        .list1 ul li {
+            list-style: disc;
+            margin: 0 25px;
+        }
+
+        .list1 ul li a {
+            color: bisque;
+            text-decoration: none;
+        }
+
+        .list1 ul li a:hover {
+            color: rgb(187, 145, 227);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.7rem;
+        }
+
+        .left a {
+            color: rgb(68, 48, 223);
+            text-decoration: none;
+        }
+
+        /* main {
+            background-image: linear-gradient(to bottom right, rgba(9, 9, 86, 0.5), rgba(171, 81, 59, 0.5));
+            height: auto;
+        } */
+
+        .uno {
+            background-image: linear-gradient(to bottom right, rgba(9, 9, 86, 0.5), rgba(171, 81, 59, 0.5));
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            height: 500px;
+        }
+
+        .uno div {
+            width: 40%;
+        }
+
+        .leftSection img {
+            border-radius: 100px;
+        }
+
+        .rightSection {
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .name {
+            color: rgb(231, 237, 111);
+            font-size: 2rem;
+        }
+
+        #element {
+            color: rgb(187, 145, 227);
+        }
+
+        #element1 {
+            right: 0px;
+        }
+
+        hr {
+            color: rgb(187, 145, 227);
+            margin: 50px;
+            height: 1.5px;
+        }
+
+        footer {
+            background: #0f0f39;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 25px 125px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 250px;
+        }
+
+        footer .rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .footer-third ul {
+            display: flex;
+        }
+
+
+        @media screen and (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+            }
+
+            nav .right ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .right ul li {
+                margin: auto;
+            }
+            .uno {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: max-content;
+            }
+
+            .rightSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: large;
+            }
+            .leftSection{
+                display: flex;
+                width: 85% !important;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .leftSection img {
+            margin-bottom: 75px;
+            width: 70vw;
+            }
+
+            .name{
+                font-size: 1.03rem;
+            }
+
+            .footer {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+
+            .footer-third ul {
+                flex-direction: column-reverse;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" data-aos="flip-down"><a href="/index.html">
+                    <h2>Raghav Dixit</h2>
+                </a></div>
+            <div class="right list" data-aos="zoom-out">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="uno">
+            <div class="leftSection" data-aos="fade-up">
+                <img src="IMG_0106.png" alt="" width="400px">
+            </div>
+            <div class="rightSection" data-aos="fade-left">
+                <div class="heading">
+                    <b>Introducing<b><br>
+                            <span class="name"><b>Raghav Dixit :<b> </span>
+                </div>
+                <br>
+                -> A visionary with an unwavering commitment to excellence.<br><br>-> Mastering Computer Science
+                with creativity and dedication.<br><br>-> Inspiring leader, lifelong learner, and catalyst for positive
+                change.<br><br><b><span id="element"></span></b>
+            </div>
+        </section>
+    </main>
+
+    <hr data-aos="fade-left">
+    <hr data-aos="fade-right" style="width:60vw; margin: auto; align-items: center; justify-content: center;" /><br>
+
+    <footer>
+        <div class="footer" data-aos="zoom-out-down">
+            <div class="footer-first">
+                <h1>Raghav's Developer PortFolio</h1>
+            </div>
+            <div class="footer-second list1" data-aos="flip-down">
+                <ul>
+                    <li><a href="/index.html">Home</a></li><br>
+                    <li><a href="/about.html">About</a></li><br>
+                    <li><a href="">Services</a></li><br>
+                    <li><a href="">Projects</a></li><br>
+                    <li><a href="">Contact Me</a></li><br>
+                </ul>
+            </div>
+            <div class="footer-third list" data-aos="flip-right">
+                <h3><u>Social Media Handles</u></h3>
+                <br>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/raghav-dixit-bb8275268/" target="_blank"><img src="linlogo.png" alt="" width="40px"> LinkedIn</a></li><br>
+                    <li><a href="https://www.instagram.com/raghavdixit1104/#" target="_blank"><img src="instalogo.png" alt="" width="40px"> Instagram</a></li><br>
+                    <li><a href="https://github.com/raghav01012004" target="_blank"><img src="gitlogo.png" alt="" width="40px"> Github</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rights">
+            CopyRight &#169; | raghavsportfolio.in | All Rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Welcome to a world of boundless potential.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
