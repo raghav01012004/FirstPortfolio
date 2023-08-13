@@ -9,20 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
-        pre{
+        pre {
             font-family: 'Tektur', cursive;
         }
+
         body {
             background: rgb(0, 0, 46);
             color: beige;
             font-family: 'Tektur', cursive;
+
         }
 
         nav {
@@ -77,11 +80,48 @@
             text-decoration: none;
         }
 
+        @keyframes wipe-cinematic-in {
+            0% {
+                clip-path: inset(100% 0 100% 0);
+            }
+
+            30%,
+            70% {
+                clip-path: inset(10% 0 10% 0);
+            }
+
+            100% {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        [transition-style="in:wipe:cinematic"] {
+            animation-name: wipe-cinematic-in;
+        }
+
+        @keyframes diamond-in-hesitate {
+            0% {
+                clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+            }
+
+            50% {
+                clip-path: polygon(45% 50%, 50% 25%, 55% 50%, 50% 75%);
+            }
+
+            100% {
+                clip-path: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
+            }
+        }
+
+        [transition-style="in:diamond:hesitate"] {
+            animation: 2.5s cubic-bezier(.25, 1, .30, 1) diamond-in-hesitate both;
+        }
 
         .uno {
             display: flex;
             justify-content: space-around;
-            margin: 8vh;
+            margin: 8vh 2vh 8vh 2vh;
+            background-image: linear-gradient(to bottom right, rgba(0,0,46, 0.5), rgba(74, 13, 80, 0.5));
         }
 
         .uno div {
@@ -217,13 +257,13 @@
                 flex-direction: column;
                 height: auto;
                 width: 100%;
-                
+
             }
 
-            .left{
+            .left {
                 margin: 10px;
             }
-            
+
             .uno {
                 flex-direction: column-reverse;
                 justify-content: center;
@@ -238,10 +278,12 @@
                 align-items: center;
                 font-size: xx-large;
             }
-            .leftSection .intro{
+
+            .leftSection .intro {
                 margin-right: 180px;
             }
-            .rightSection{
+
+            .rightSection {
                 display: flex;
                 width: 85% !important;
                 justify-content: center;
@@ -250,14 +292,16 @@
 
 
             .rightSection img {
-            margin-bottom: 75px;
-            width: 50vw;
+                margin-bottom: 75px;
+                width: 50vw;
             }
-            .dos{
+
+            .dos {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
+
             .box {
                 flex-direction: column;
             }
@@ -284,23 +328,27 @@
             .dos .box {
                 width: 70vw;
             }
+
             /* body{
                 min-width: auto;
             } */
-            nav .right ul{
+            nav .right ul {
                 display: flex;
                 flex-direction: column;
             }
-            .right ul li{
+
+            .right ul li {
                 margin: auto;
             }
-            .footer{
+
+            .footer {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 padding: 0px;
             }
-            .footer-third ul{
+
+            .footer-third ul {
                 flex-direction: column-reverse;
             }
         }
@@ -317,7 +365,7 @@
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/about.html">About</a></li>
-                    <li><a href="">Services</a></li>
+                    <li><a href="/services.html">Services</a></li>
                     <li><a href="">Projects</a></li>
                     <li><a href="">Contact Me</a></li>
 
@@ -326,17 +374,17 @@
         </nav>
     </header>
     <main>
-        <section class="uno">
+        <section class="uno" transition-style="in:diamond:hesitate">
             <div class="leftSection" data-aos="fade-up">
                 <div class="intro">
-<pre>
+                    <pre>
 <i>Hey There !!!</i>
                 
 I am <span class="name">Raghav</span>,<br><b>AND</b> <br>I am a passionate
 <b><span id="element"></span>.</b> <br>
 </pre>
                 </div>
-                
+
 
                 <div class="buttons">
                     <img src="resumelogo.png" alt="" width="80px"><button class="btn"><a href="">Download resume</a>
@@ -402,7 +450,7 @@ I am <span class="name">Raghav</span>,<br><b>AND</b> <br>I am a passionate
                 <ul>
                     <li><a href="/index.html">Home</a></li><br>
                     <li><a href="/about.html">About</a></li><br>
-                    <li><a href="">Services</a></li><br>
+                    <li><a href="/services.html">Services</a></li><br>
                     <li><a href="">Projects</a></li><br>
                     <li><a href="">Contact Me</a></li><br>
                 </ul>
@@ -411,9 +459,12 @@ I am <span class="name">Raghav</span>,<br><b>AND</b> <br>I am a passionate
                 <h3><u>Social Media Handles</u></h3>
                 <br>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/raghav-dixit-bb8275268/" target="_blank"><img src="linlogo.png" alt="" width="40px"> LinkedIn</a></li><br>
-                    <li><a href="https://www.instagram.com/raghavdixit1104/#" target="_blank"><img src="instalogo.png" alt="" width="40px"> Instagram</a></li><br>
-                    <li><a href="https://github.com/raghav01012004" target="_blank"><img src="gitlogo.png" alt="" width="40px"> Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/raghav-dixit-bb8275268/" target="_blank"><img
+                                src="linlogo.png" alt="" width="40px"> LinkedIn</a></li><br>
+                    <li><a href="https://www.instagram.com/raghavdixit1104/#" target="_blank"><img src="instalogo.png"
+                                alt="" width="40px"> Instagram</a></li><br>
+                    <li><a href="https://github.com/raghav01012004" target="_blank"><img src="gitlogo.png" alt=""
+                                width="40px"> Github</a></li>
                 </ul>
             </div>
             <!-- <div class="footer-third">
