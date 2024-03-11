@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghav's PortFolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        pre {
+            font-family: 'Tektur', cursive;
+        }
+
+        body {
+            background: rgb(0, 0, 46);
+            color: beige;
+            font-family: 'Tektur', cursive;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background: rgb(0, 0, 60);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: safe;
+        }
+
+        .list ul li {
+            list-style: none;
+            margin: 0 25px;
+        }
+
+        .list ul li a {
+            color: bisque;
+            text-decoration: none;
+        }
+
+        .list ul li a:hover {
+            color: rgb(187, 145, 227);
+            font-size: 1.02rem;
+        }
+
+        .list1 ul li {
+            list-style: disc;
+            margin: 0 25px;
+        }
+
+        .list1 ul li a {
+            color: bisque;
+            text-decoration: none;
+        }
+
+        .list1 ul li a:hover {
+            color: rgb(187, 145, 227);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.7rem;
+        }
+
+        .left a {
+            color: rgb(68, 48, 223);
+            text-decoration: none;
+        }
+
+        /* .uno {
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 46, 0.5), rgba(74, 13, 80, 0.5));
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            height: 500px;
+            align-items: center;
+        } */
+        main {
+            margin: 20px;
+            padding: 10px;
+            background: rgb(19, 3, 99);
+            border-radius: 10px;
+            width: fit-content;
+        }
+
+        .forms {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #element {
+            color: rgb(187, 145, 227);
+        }
+
+        #element1 {
+            right: 0px;
+        }
+
+        footer {
+            background: #0f0f39;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 25px 125px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 250px;
+        }
+
+        footer .rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .footer-third ul {
+            display: flex;
+        }
+        textarea{
+            visibility: hidden;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+            }
+
+            nav .right ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .right ul li {
+                margin: auto;
+            }
+
+            .glow {
+                font-size: 1.03rem;
+            }
+
+            .footer {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+
+            .footer-third ul {
+                flex-direction: column-reverse;
+            }
+
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "ibqLye_XBsbIaV6gS",
+            });
+        })();
+
+        function sendMail() {
+            let parms = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                msg: document.getElementById("msg").value
+            }
+            emailjs.send("service_gb5v88g", "template_zie1vj6", parms).then(alert("Mail sent Succesfully!"));
+        }
+    </script>
+    
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" data-aos="flip-down"><a href="/index.html">
+                    <h2>Raghav Dixit</h2>
+                </a></div>
+            <div class="right list" data-aos="zoom-out">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/services.html">Projects</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="forms">
+        <main data-aos="zoom-out-down">
+            <div class="content">
+                <h1>Contact Me</h1>
+            </div>
+            <br>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Sector 62, Noida, Uttar Pradesh. (251001)</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+91 - 9456033500</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>raghav.dixit.12.a1.sdpsmzn@gmail.com</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="contactForm">
+                    <form>
+                        <h2>Connect with Me : </h2>
+                        <div class="inputBox">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="email" name="email" placeholder="Your Email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="phone" name="phone" placeholder="Your Phone" required="required">
+                            <span>Phone</span>
+                        </div><br />
+                        <div class="inputBox">
+                            <span>Enter Details......</span><br />
+                            <textarea id="msg" name="msg" placeholder="Your Message" required="required"
+                                rows="5"></textarea>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" name="" onclick="sendMail()" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer" data-aos="zoom-out-down">
+            <div class="footer-first">
+                <h1>Raghav's Developer PortFolio</h1>
+            </div>
+            <div class="footer-second list1" data-aos="flip-down">
+                <ul>
+                    <li><a href="/index.html">Home</a></li><br>
+                    <li><a href="/about.html">About</a></li><br>
+                    <li><a href="/services.html">Services</a></li><br>
+                    <li><a href="">Projects</a></li><br>
+                    <li><a href="/contact.html">Contact Me</a></li><br>
+                </ul>
+            </div>
+            <div class="footer-third list" data-aos="flip-right">
+                <h3><u>Social Media Handles</u></h3>
+                <br>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/raghav-dixit-bb8275268/" target="_blank"><img
+                                src="linlogo.png" alt="" width="40px"> LinkedIn</a></li><br>
+                    <li><a href="https://www.instagram.com/raghavdixit1104/#" target="_blank"><img src="instalogo.png"
+                                alt="" width="40px"> Instagram</a></li><br>
+                    <li><a href="https://github.com/raghav01012004" target="_blank"><img src="gitlogo.png" alt=""
+                                width="40px"> Github</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rights">
+            CopyRight &#169; | raghavsportfolio.in | All Rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Welcome to a world of boundless potential.'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
